@@ -1,0 +1,31 @@
+<mat-dialog-content class="mat-typography" #matDialogResultado>
+    <div *ngIf="verCedula">
+        <div class="row">
+            <div class="col-md-4">Código</div>
+            <div class="col-md-6">Nombre</div>
+            <div class="col-md-2">Valor</div>
+        </div>
+
+        <div class="row mt-2" *ngFor="let item of resultado">
+            <div class="col-md-4">{{item.codigo}}</div>
+            <div class="col-md-6">{{item.nombre}}</div>
+            <div class="col-md-2">{{item.suma_asegurada}}</div>
+        </div>
+    </div>
+    <div *ngIf="verSeguro">
+        <div class="row">
+            <div class="col-md-8">Nombres</div>
+            <div class="col-md-4">Cédula</div>
+         </div>
+
+        <div class="row mt-2" *ngFor="let item of resultado">
+            <div class="col-md-8">{{item.nombres}} {{item.apellidos}}</div>
+            <div class="col-md-4">{{item.cedula}}</div>
+         </div>
+    </div>
+
+
+</mat-dialog-content>
+<mat-dialog-actions align="center" class="mt-5">
+    <button mat-dialog-close class="btn btn-success btn-sm">Cerrar</button>
+</mat-dialog-actions>

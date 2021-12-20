@@ -1,0 +1,64 @@
+ 
+    <div class="s012">
+        <form >
+            <fieldset>
+                <h2 class="text-center">Búsqueda Principal</h2>
+            </fieldset>
+            <div class="inner-form">
+                <div class="container">
+                    <div class="row justify-content-md-center">
+                        <header>
+                            <div class="travel-type-wrap">
+                                <div class="item active" (click)="TipoBusqueda('cedula')">
+                                    <div class="group-icon">
+                                        <i class="fa fa-address-card-o"></i>
+                                    </div>
+                                    <span>POR CÉDULA</span>
+                                </div>
+                                <div class="item" (click)="TipoBusqueda('seguro')">
+                                    <div class="group-icon">
+                                        <i class="fa fa-shield"></i>
+
+                                    </div>
+                                    <span>POR SEGURO</span>
+                                </div>
+
+
+                            </div>
+                        </header>
+                    </div>
+                </div>
+                <div class="main-form" id="main-form">
+                    <div class="row">
+                        <div class=" input-wrap col-lg-12">
+                            <div class="icon-wrap mt-3">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" #valor_input placeholder="{{label_input}}" />
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row last   justify-content-md-center">
+                        <button class=" btn-search mr-1" type="button" (click)="Buscar()">Buscar</button>
+                        <button class=" btn-carga ml-1" type="button" (click)="Carga()">Cargar</button>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+ 
+    <script src="assets/js/extention/choices.js"></script>
+    <script>
+        const choices = new Choices('[data-trigger]',
+            {
+                searchEnabled: false,
+                itemSelectText: '',
+            });
+
+    </script>
+
+ 
